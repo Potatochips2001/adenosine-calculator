@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #202020;
+      }
+      #btn:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <script>
+      function calculate()
+      {
+        let result = document.getElementById("result");
+        let awake = document.getElementById("awake").value;
+        let adenosine = (awake-6) / 4 + 4.5;
+        if (awake < 6) adenosine = 0;
+        let caffeine = adenosine / 5.5;
+        result.innerText = `Adenosine levels: ${adenosine}% amount of caffeine needed to stay awake: ${caffeine} mg/kg`;
+      }
+    </script>
+  </head>
+  <body>
+    <label style="color: white;">Hours awake:</label> <input id="awake" type="number" style="background-color: #404040; width: 80px;" step="3"><br>
+    <button id="btn" onclick="calculate();" style="background-color: #404040;">Calculate</button>
+    <p id="result" style="color: white;">Adenosine levels:</p>
+    <br><p style="color: #f00">Adenosine accumulates after 6 hours of prolonged wakefulness<br>Formula: (hours awake-6) / 4 + 4.5</p>
+  </body>
+</html>
