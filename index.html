@@ -24,7 +24,7 @@
         let adenosine = (awake-6) / 4 + 4.5;
         if (awake < 6) adenosine = 0;
         let caffeine = adenosine / 5.5;
-        result.innerText = `Adenosine levels: ${adenosine}%\nMmount of caffeine needed to stay awake: ${caffeine} mg/kg`;
+        result.innerText = `Adenosine levels: ${adenosine}%\nAmount of caffeine needed to stay awake: ${caffeine} mg/kg`;
         if (caffeine > 10) result.innerText = `Adenosine levels ${adenosine}%\nNo amount of caffeine will keep you awake`;
       }
     </script>
