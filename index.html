@@ -27,14 +27,14 @@
         let awake = document.getElementById("awake").value;
         let adenosine = (awake-6) / 4 + 4.5;
         if (awake < 6) adenosine = 0;
-        let caffeine = adenosine / 5.5;
+        let caffeine = adenosine / 10;
         result.innerText = `Adenosine levels: ${adenosine}%\nAmount of caffeine needed to stay awake: ${caffeine} mg/kg`;
-        if (caffeine > 10) result.innerText = `Adenosine levels ${adenosine}%\nNo amount of caffeine will keep you awake`;
+        if (caffeine > 5) result.innerText = `Adenosine levels ${adenosine}%\nNo amount of caffeine will keep you awake`;
       }
     </script>
   </head>
   <body>
-    <label style="color: #ccc;">Hours awake:</label> <input id="awake" type="number" style="width: 80px;" step="3"><br>
+    <label style="color: #ccc;">Hours awake:</label> <input id="awake" type="number" style="width: 80px;" step="1"><br>
     <button id="btn" onclick="calculate();">Calculate</button>
     <p id="result" style="color: #ccc;">Adenosine levels:</p>
     <br><p style="color: #f00">Adenosine accumulates after 6 hours of prolonged wakefulness<br>Formula: (hours awake-6) / 4 + 4.5</p>
